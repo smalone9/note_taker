@@ -36,5 +36,5 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Contribution
 Made with ❤️ by Samantha Malone
-Shout out to my tutor and Jeremy Lentz.
+Shout out to my tutor, T.A., and Jeremy Lentz.
 © 2021 Samantha Malone. All rights reserved.
