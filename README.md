@@ -8,7 +8,7 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ## Website
 [Check it Out](https://whispering-journey-03029.herokuapp.com/)
 
-![Image of Password Generator](.screenshot.PNG)
+![Image of Password Generator](screenshot.PNG)
 
 GIVEN a note-taking application
 WHEN I open the Note Taker
