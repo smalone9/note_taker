@@ -37,25 +37,25 @@ router.post("/notes", (req, res) => {
 
 router.delete("/notes/:id", (req, res) => {
     // read db.json, filter and write db.json
-    // const { id } = req.params;
-    // let doNotDel;
+    const { id } = req.params;
+    let doNotDel;
     fs.readFile("./db/db.json", "utf8", (err, data) => {
-        let oldData = JSON.parse(data);
-        oldData = oldData.filter(note => note.id !== req.params.id);
-        // if (err) {
-        //     res.status(500).send(err);
-        // }
-        // doNotDel = oldData.filter((note) => {
-        //     return note.id !== id;
-        // });
-        // console.log(oldData);
+        const oldData = JSON.parse(data);
+        // oldData = oldData.filter(note => note.id !== req.params.id);
+        if (err) {
+            res.status(500).send(err);
+        }
+        doNotDel = oldData.filter((note) => {
+            return note.id !== id;
+        });
+        console.log(oldData);
         fs.writeFile("./db/db.json", JSON.stringify(doNotDel), (err) => {
             if (err) {
                 res.status(500).send(err);
             }
         });
-        // res.send(doNotDel)
-        res.json("Success!");
+        res.send(doNotDel)
+        // res.json("Success!");
     });  
 });
 module.exports = router;
